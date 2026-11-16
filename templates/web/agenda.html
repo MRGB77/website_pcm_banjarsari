@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Agenda{% endblock %}
+{% block content %}
+<section class="page-title"><div class="wrap"><h1>Agenda Kegiatan</h1></div></section>
+<div class="wrap section">
+  <h2 class="sub">Akan datang</h2>
+  <ul class="plain agenda-daftar">
+    {% for agenda in akan_datang %}
+      {% include "web/_item_agenda.html" %}
+    {% empty %}
+      <li class="kosong">Belum ada agenda mendatang.</li>
+    {% endfor %}
+  </ul>
+
+  <h2 class="sub">Sudah terlaksana</h2>
+  <ul class="plain agenda-daftar">
+    {% for agenda in sudah_terlaksana %}
+      {% include "web/_item_agenda.html" %}
+    {% empty %}
+      <li class="kosong">Belum ada agenda yang terlaksana.</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

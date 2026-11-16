@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}Beranda{% endblock %}
+{% block content %}
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-teks">
+      <p class="salam">Assalamu'alaikum warahmatullahi wabarakatuh</p>
+      <h1>{{ profil.nama|default:"Pimpinan Cabang Muhammadiyah Banjarsari" }}</h1>
+      <p>{{ profil.tentang|truncatewords:45 }}</p>
+      <div class="hero-aksi">
+        <a class="btn btn-kuning" href="{% url 'web:profil' %}">Kenali kami</a>
+        <a class="btn btn-garis" href="{% url 'web:kontak' %}">Hubungi kami</a>
+      </div>
+    </div>
+    {% if profil.gambar_hero %}
+    <figure class="hero-gambar">
+      <img src="{{ profil.gambar_hero.url }}" alt="Gambar utama {{ profil.nama_singkat }}">
+    </figure>
+    {% endif %}
+  </div>
+</section>
+
+<div class="wrap">
+  <ul class="statistik plain">
+    <li><strong>{{ jumlah_ranting }}</strong><span>Ranting</span></li>
+    <li><strong>{{ jumlah_amal_usaha }}</strong><span>Amal Usaha</span></li>
+    <li><strong>{{ profil.jumlah_anggota_ktam }}</strong><span>Anggota ber-KTAM</span></li>
+  </ul>
+</div>
+
+<section class="wrap section">
+  <div class="section-head">
+    <h2>Berita terbaru</h2>
+    <a href="{% url 'web:berita_daftar' %}">Semua berita →</a>
+  </div>
+  <div class="grid">
+    {% for berita in berita_terbaru %}
+      {% include "web/_kartu_berita.html" %}
+    {% empty %}
+      <p class="kosong">Belum ada berita.</p>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="wrap section">
+  <div class="section-head">
+    <h2>Agenda mendatang</h2>
+    <a href="{% url 'web:agenda' %}">Semua agenda →</a>
+  </div>
+  <ul class="plain agenda-daftar">
+    {% for agenda in agenda_mendatang %}
+      {% include "web/_item_agenda.html" %}
+    {% empty %}
+      <li class="kosong">Belum ada agenda mendatang.</li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}

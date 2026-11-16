@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}{{ berita.judul }}{% endblock %}
+{% block meta_description %}{{ berita.ringkasan|truncatechars:160 }}{% endblock %}
+{% block content %}
+<section class="page-title">
+  <div class="wrap">
+    <p class="meta"><a href="{% url 'web:berita_daftar' %}">← Semua berita</a></p>
+    <h1>{{ berita.judul }}</h1>
+    <p class="meta"><time datetime="{{ berita.tanggal_terbit|date:'Y-m-d' }}">{{ berita.tanggal_terbit|date:"l, j F Y" }}</time></p>
+  </div>
+</section>
+<div class="wrap section prose">
+  {% if berita.gambar_sampul %}
+  <img class="sampul" src="{{ berita.gambar_sampul.url }}" alt="Sampul: {{ berita.judul }}">
+  {% endif %}
+  {{ berita.isi|linebreaks }}
+</div>
+
+{% if lainnya %}
+<section class="wrap section">
+  <div class="section-head"><h2>Berita lainnya</h2></div>
+  <div class="grid">
+    {% for berita in lainnya %}
+      {% include "web/_kartu_berita.html" %}
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+{% endblock %}

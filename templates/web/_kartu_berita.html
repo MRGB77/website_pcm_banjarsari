@@ -1,0 +1,14 @@
+<article class="card">
+  <a href="{% url 'web:berita_detail' slug=berita.slug %}" class="card-link">
+    {% if berita.gambar_sampul %}
+    <img class="card-img" src="{{ berita.gambar_sampul.url }}" alt="Sampul: {{ berita.judul }}" loading="lazy">
+    {% else %}
+    <div class="card-img card-img-kosong" aria-hidden="true"></div>
+    {% endif %}
+    <div class="card-body">
+      <time datetime="{{ berita.tanggal_terbit|date:'Y-m-d' }}">{{ berita.tanggal_terbit|date:"j F Y" }}</time>
+      <h3>{{ berita.judul }}</h3>
+      <p>{{ berita.ringkasan|truncatechars:120 }}</p>
+    </div>
+  </a>
+</article>

@@ -1,0 +1,90 @@
+{% load static %}<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Beranda{% endblock %} · {{ profil.nama_singkat|default:"PCM Banjarsari" }}</title>
+  <meta name="description" content="{% block meta_description %}{{ profil.nama|default:"Pimpinan Cabang Muhammadiyah Banjarsari" }}, Surakarta.{% endblock %}">
+  <link rel="stylesheet" href="{% static 'css/site.css' %}">
+</head>
+<body>
+  {% with halaman=request.resolver_match.url_name %}
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a class="brand" href="{% url 'web:beranda' %}">
+        <img class="brand-logo" src="{% static 'img/logo-muhammadiyah.svg' %}" alt="Logo Muhammadiyah" width="36" height="36" onerror="this.style.display='none'">
+        <span class="brand-text">
+          <strong>{{ profil.nama_singkat|default:"PCM Banjarsari" }}</strong>
+          <small>{{ profil.tagline }}</small>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="menu-utama">☰</button>
+      <nav id="menu-utama" class="nav" aria-label="Menu utama">
+        <a href="{% url 'web:beranda' %}" {% if halaman == 'beranda' %}class="aktif" aria-current="page"{% endif %}>Beranda</a>
+        <a href="{% url 'web:profil' %}" {% if halaman == 'profil' %}class="aktif" aria-current="page"{% endif %}>Profil</a>
+        <a href="{% url 'web:pimpinan' %}" {% if halaman == 'pimpinan' %}class="aktif" aria-current="page"{% endif %}>Pimpinan</a>
+        <a href="{% url 'web:ranting' %}" {% if halaman == 'ranting' %}class="aktif" aria-current="page"{% endif %}>Ranting</a>
+        <a href="{% url 'web:amal_usaha' %}" {% if halaman == 'amal_usaha' %}class="aktif" aria-current="page"{% endif %}>Amal Usaha</a>
+        <a href="{% url 'web:berita_daftar' %}" {% if halaman == 'berita_daftar' or halaman == 'berita_detail' %}class="aktif" aria-current="page"{% endif %}>Berita</a>
+        <a href="{% url 'web:agenda' %}" {% if halaman == 'agenda' %}class="aktif" aria-current="page"{% endif %}>Agenda</a>
+        <a href="{% url 'web:unduhan' %}" {% if halaman == 'unduhan' %}class="aktif" aria-current="page"{% endif %}>Unduhan</a>
+        <a href="{% url 'web:kontak' %}" {% if halaman == 'kontak' %}class="aktif" aria-current="page"{% endif %}>Kontak</a>
+      </nav>
+    </div>
+  </header>
+  {% endwith %}
+
+  {% if messages %}
+  <div class="wrap">
+    {% for pesan in messages %}
+    <div class="alert alert-{{ pesan.tags|default:'info' }}" role="status">{{ pesan }}</div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <strong>{{ profil.nama|default:"Pimpinan Cabang Muhammadiyah Banjarsari" }}</strong>
+        <p>{{ profil.alamat_sekretariat|default:"Alamat belum tersedia" }}</p>
+        <p>
+          {% if profil.telepon %}Telp. {{ profil.telepon }}{% endif %}
+          {% if profil.telepon and profil.email %} · {% endif %}
+          {% if profil.email %}{{ profil.email }}{% endif %}
+        </p>
+      </div>
+      <div>
+        <strong>Tautan Persyarikatan</strong>
+        <ul class="plain">
+          {% for tautan in tautan_terkait %}
+          <li><a href="{{ tautan.url }}" target="_blank" rel="noopener noreferrer">{{ tautan.nama }}</a></li>
+          {% empty %}
+          <li>Belum ada tautan.</li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="footer-note">
+        <p>Website ini dibuat untuk tugas kuliah Pemrograman Web berbasis Framework (TIF1336), <strong>bukan website resmi</strong> {{ profil.nama|default:"PCM Banjarsari" }}.</p>
+        <p class="atribusi">Logo Muhammadiyah: K. H. Siradj Dahlan, vektor oleh Hibensis, via Wikimedia Commons, lisensi CC BY-SA 4.0.</p>
+        <p><a href="{% url 'admin:index' %}">Admin</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var tombol = document.querySelector('.nav-toggle');
+      var menu = document.getElementById('menu-utama');
+      if (!tombol || !menu) return;
+      tombol.addEventListener('click', function () {
+        var terbuka = menu.classList.toggle('terbuka');
+        tombol.setAttribute('aria-expanded', terbuka ? 'true' : 'false');
+      });
+    })();
+  </script>
+</body>
+</html>

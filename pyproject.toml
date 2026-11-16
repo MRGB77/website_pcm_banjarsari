@@ -1,0 +1,15 @@
+[project]
+name = "pcm-banjarsari"
+version = "0.1.0"
+description = "Website Pimpinan Cabang Muhammadiyah (PCM) Banjarsari, Surakarta - tugas Pemrograman Web berbasis Framework"
+requires-python = ">=3.12"
+dependencies = [
+    "django>=6.0,<7.0",
+    "dj-database-url>=2.3",
+    "django-storages[s3]>=1.14",
+    "gunicorn>=23.0",
+    "pillow>=11.0",
+    "psycopg[binary]>=3.2",
+    "python-dotenv>=1.0",
+    "whitenoise>=6.9",
+]

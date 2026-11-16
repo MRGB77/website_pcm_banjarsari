@@ -1,0 +1,18 @@
+<li class="agenda-item">
+  <div class="agenda-tanggal" aria-hidden="true">
+    {% if agenda.keterangan_waktu %}
+    <strong>…</strong><span>menyusul</span>
+    {% else %}
+    <strong>{{ agenda.waktu_mulai|date:"j" }}</strong><span>{{ agenda.waktu_mulai|date:"M Y" }}</span>
+    {% endif %}
+  </div>
+  <div>
+    <h3>{{ agenda.nama }}</h3>
+    <p class="meta">
+      {% if agenda.keterangan_waktu %}{{ agenda.keterangan_waktu }}
+      {% else %}{{ agenda.waktu_mulai|date:"l, j F Y" }}{% if agenda.punya_jam %}, {{ agenda.waktu_mulai|date:"H:i" }} WIB{% endif %}{% endif %}
+      {% if agenda.tempat %} · {{ agenda.tempat }}{% endif %}
+    </p>
+    {% if agenda.keterangan %}<p>{{ agenda.keterangan }}</p>{% endif %}
+  </div>
+</li>

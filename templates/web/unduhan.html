@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Unduhan{% endblock %}
+{% block content %}
+<section class="page-title"><div class="wrap"><h1>Unduhan</h1></div></section>
+<div class="wrap section">
+  <ul class="plain daftar-unduhan">
+    {% for dokumen in daftar_dokumen %}
+    <li>
+      <div>
+        <strong>{{ dokumen.judul }}</strong>
+        {% if dokumen.keterangan %}<p class="meta">{{ dokumen.keterangan }}</p>{% endif %}
+        <p class="meta">Diunggah {{ dokumen.tanggal_unggah|date:"j F Y" }}</p>
+      </div>
+      <a class="btn" href="{{ dokumen.berkas.url }}" download>Unduh</a>
+    </li>
+    {% empty %}
+    <li class="kosong">Belum ada dokumen yang dapat diunduh.</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

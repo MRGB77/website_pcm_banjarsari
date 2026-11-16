@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Profil{% endblock %}
+{% block content %}
+<section class="page-title"><div class="wrap"><h1>Profil</h1></div></section>
+<div class="wrap section prose">
+  <h2>Tentang {{ profil.nama_singkat }}</h2>
+  {% if profil.tentang %}{{ profil.tentang|linebreaks }}{% else %}<p class="kosong">Belum tersedia.</p>{% endif %}
+
+  <h2>Sejarah</h2>
+  {% if profil.sejarah %}{{ profil.sejarah|linebreaks }}{% else %}<p class="kosong">Belum tersedia.</p>{% endif %}
+
+  <h2>Visi</h2>
+  {% if profil.visi %}<blockquote>{{ profil.visi }}</blockquote>{% else %}<p class="kosong">Belum tersedia.</p>{% endif %}
+
+  <h2>Misi</h2>
+  {% if profil.daftar_misi %}
+  <ol>
+    {% for misi in profil.daftar_misi %}<li>{{ misi }}</li>{% endfor %}
+  </ol>
+  {% else %}<p class="kosong">Belum tersedia.</p>{% endif %}
+</div>
+{% endblock %}

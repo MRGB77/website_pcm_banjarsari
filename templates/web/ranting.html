@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Pimpinan Ranting{% endblock %}
+{% block content %}
+<section class="page-title"><div class="wrap"><h1>Pimpinan Ranting</h1></div></section>
+<div class="wrap section">
+  <div class="tabel-bungkus">
+    <table class="tabel">
+      <thead>
+        <tr><th>Ranting</th><th>Ketua</th><th>Alamat</th><th>Telepon</th></tr>
+      </thead>
+      <tbody>
+        {% for item in daftar_ranting %}
+        <tr>
+          <td data-label="Ranting">{{ item.nama }}</td>
+          <td data-label="Ketua">{{ item.ketua|default:"Belum tersedia" }}</td>
+          <td data-label="Alamat">{{ item.alamat|default:"Belum tersedia" }}</td>
+          <td data-label="Telepon">{{ item.telepon|default:"-" }}</td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="4" class="kosong">Belum ada data ranting.</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

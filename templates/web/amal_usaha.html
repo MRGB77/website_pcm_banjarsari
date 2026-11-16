@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Amal Usaha{% endblock %}
+{% block content %}
+<section class="page-title"><div class="wrap"><h1>Amal Usaha Muhammadiyah</h1></div></section>
+<div class="wrap section">
+  {% for label, daftar in kelompok %}
+  <h2 class="sub">{{ label }}</h2>
+  <div class="grid">
+    {% for item in daftar %}
+    <article class="card">
+      {% if item.gambar %}
+      <img class="card-img" src="{{ item.gambar.url }}" alt="{{ item.nama }}" loading="lazy">
+      {% else %}
+      <div class="card-img card-img-kosong teks" aria-hidden="true">{{ item.nama }}</div>
+      {% endif %}
+      <div class="card-body">
+        <h3>{{ item.nama }}</h3>
+        {% if item.alamat %}<p class="meta">{{ item.alamat }}</p>{% endif %}
+        {% if item.deskripsi %}<p>{{ item.deskripsi }}</p>{% endif %}
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+  {% empty %}
+  <p class="kosong">Belum ada data amal usaha.</p>
+  {% endfor %}
+</div>
+{% endblock %}
