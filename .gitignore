@@ -6,3 +6,10 @@ db.sqlite3
 media/
 staticfiles/
 .DS_Store
+
+# Neon & Node artifacts
+.neon
+neon.ts
+node_modules/
+package-lock.json
+package.json
