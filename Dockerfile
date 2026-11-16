@@ -7,7 +7,6 @@ ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
     UV_COMPILE_BYTECODE=1 \
     UV_LINK_MODE=copy \
-    UV_NO_SYNC=1 \
     UV_CACHE_DIR=/tmp/uv-cache \
     PATH="/app/.venv/bin:$PATH"
 
