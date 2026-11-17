@@ -9,10 +9,13 @@ Tugas 1 — Pemrograman Web berbasis Framework (TIF1336): membangun dan men-depl
 
 | Nama | NIM |
 |------|-----|
-| _isi nama anggota 1_ | _NIM_ |
-| _isi nama anggota 2_ | _NIM_ |
+| _Danar Tri Prayoga_ | _L200240185_ |
+| _Daffa Raihan_ | _L200240203_ |
+| _Azwar Dipo Astuko_ | _L200240173_ |
+| _Gibran Alghifari Maulana Masli_ | _L200240172_ |
+| _Kaukaban Syarqi_ | _L200240176_ |
 
-**Nama kelompok:** _isi_
+**Nama kelompok:** PCM Banjarsari
 
 ## PCM yang dipilih
 
