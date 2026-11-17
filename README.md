@@ -86,10 +86,10 @@ docker compose exec web uv run python manage.py createsuperuser
 
 ## Deployment
 
-- **Platform:** _isi (Vercel / Render / Railway)_ — alasan: _isi_
-- **Database:** _isi (Supabase / Neon)_ — alasan: _isi_
-- **Object storage media:** _isi (mis. Supabase Storage via S3)_ — alasan: _isi_
-- **URL produksi:** _isi_
+- **Platform:** _Vercel_ — alasan: _Kami memilih Vercel karena mendukung Django tanpa konfigurasi tambahan, deploy otomatis dari GitHub setiap ada push, menyediakan HTTPS dan URL publik gratis, serta setup-nya cepat sehingga cocok untuk tenggat yang ketat. Database dan penyimpanan media dipisahkan ke Supabase, sehingga data dan foto tetap aman setelah redeploy._
+- **Database:** _Supabase_ — alasan: _Kami memilih Supabase karena menyediakan PostgreSQL terkelola yang gratis dan mudah dihubungkan lewat DATABASE_URL, sehingga cocok dengan Django dan Vercel._
+- **Object storage media:** _Supabase via S3_ — alasan: _Kami memilih Supabase Storage sebagai penyimpanan media karena Vercel tidak menyimpan file unggahan secara permanen, sehingga foto harus disimpan di object storage terpisah. Supabase mendukung protokol S3, jadi langsung kompatibel dengan django-storages, dan satu akun yang sama sudah dipakai untuk database, sehingga pengaturannya lebih sederhana. Foto yang diunggah lewat admin tetap ada setelah redeploy._
+- **URL produksi:** _https://pcm-banjarsari.vercel.app/_
 
 Langkah ringkas: atur environment variable di dashboard platform, jalankan
 `DATABASE_URL=<url produksi> uv run python manage.py migrate` lalu `... seed_pcm` dari laptop, dan buat superuser.
