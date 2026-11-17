@@ -27,19 +27,18 @@ Tugas 1 — Pemrograman Web berbasis Framework (TIF1336): membangun dan men-depl
 
 | Data | Sumber | Tanggal diambil |
 |------|--------|-----------------|
-| Susunan pimpinan 2022–2027 | SK PCM Banjarsari No. 157/KEP/IV.0/D/2023 (21 Okt 2023) dan SK PDM Kota Surakarta No. 128/KEP/III.0/D/2023 | _isi_ |
-| Sejarah dan SK pendirian cabang | SK PWM Jawa Tengah No. K/79/1978 (24 Muharram 1398 H / 4 Jan 1978 M) | _isi_ |
-| Daftar ranting, SK pendirian ranting, jumlah anggota ber-NBM (513) | Laporan Musyawarah Cabang Muhammadiyah Banjarsari 2023, hlm. 9 (angka periode 2015–2022) | _isi_ |
-| Ketua ranting Keprabon, Timuran, Punggawan, Kestalan | SK PCM No. 168, 174, 171, 169/KEP/IV.0/D/2023 (25 Des 2023) | _isi_ |
-| Ketua ranting Ketelan dan Gilingan | SK PCM No. 018/KEP/IV.0/D/2026 (26 Jun 2026) dan No. 029/KEP/IV.0/D/2026 (9 Okt 2026) | _isi_ |
-| Ketua ranting Setabelan | **Belum tersedia** (SK belum diterima), ditulis "Belum tersedia" | - |
-| Amal usaha (SMA Muhammadiyah 6, 9 masjid, Wisma Musolla Pemuda) | Laporan Musycab 2023 hlm. 12; berkas "amal usaha pcm banjarsari"; papan "Tanah Milik Muhammadiyah" di lokasi | _isi_ |
-| Berita dan agenda koordinasi 16 Okt 2026 | Poster dan contoh publikasi "PCM Banjarsari News" dari pengurus | _isi_ |
-| Agenda Pengajian Hari Bermuhammadiyah (25 Okt) dan Safari Dakwah (rencana Des–Jan, belum pasti) | Berkas "kegiatan mendatang pcm banjarsari" | _isi_ |
+| Susunan pimpinan 2022–2027 | SK PCM Banjarsari No. 157/KEP/IV.0/D/2023 (21 Okt 2023) dan SK PDM Kota Surakarta No. 128/KEP/III.0/D/2023 | _11 November 2026_ |
+| Sejarah dan SK pendirian cabang | SK PWM Jawa Tengah No. K/79/1978 (24 Muharram 1398 H / 4 Jan 1978 M) | _11 November 2026_ |
+| Daftar ranting, SK pendirian ranting, jumlah anggota ber-NBM (513) | Laporan Musyawarah Cabang Muhammadiyah Banjarsari 2023, hlm. 9 (angka periode 2015–2022) | _11 November 2026_ |
+| Ketua ranting Keprabon, Timuran, Punggawan, Kestalan | SK PCM No. 168, 174, 171, 169/KEP/IV.0/D/2023 (25 Des 2023) | _11 November 2026_ |
+| Ketua ranting Ketelan dan Gilingan | SK PCM No. 018/KEP/IV.0/D/2026 (26 Jun 2026) dan No. 029/KEP/IV.0/D/2026 (9 Okt 2026) | _11 November 2026_ |
+| Amal usaha (SMA Muhammadiyah 6, 9 masjid, Wisma Musolla Pemuda) | Laporan Musycab 2023 hlm. 12; berkas "amal usaha pcm banjarsari"; papan "Tanah Milik Muhammadiyah" di lokasi | _11 November 2026_ |
+| Berita dan agenda koordinasi 16 Okt 2026 | Poster dan contoh publikasi "PCM Banjarsari News" dari pengurus | _11 November 2026_ |
+| Agenda Pengajian Hari Bermuhammadiyah (25 Okt) dan Safari Dakwah (rencana Des–Jan, belum pasti) | Berkas "kegiatan mendatang pcm banjarsari" | _11 November 2026_ |
 | Kegiatan rutin (rapat pleno, pengajian HPT, dll.) | Berkas "kegiatan rutin pcm banjarsari" | _isi_ |
-| Visi dan misi | Berkas "visi misi muhammadiyah" | _isi_ |
-| Tagline "Memajukan Banjarsari, Mencerahkan Semesta." | Sampul/footer dokumen Musycab 2023 | _isi_ |
-| Tautan PDM, PWM, PP | muhammadiyahsolo.com (tercantum di kop PDM Kota Surakarta), pwmjateng.com, muhammadiyah.or.id | _isi_ |
+| Visi dan misi | Berkas "visi misi muhammadiyah" | _11 November 2026_ |
+| Tagline "Memajukan Banjarsari, Mencerahkan Semesta." | Sampul/footer dokumen Musycab 2023 | _15 November 2026_ |
+| Tautan PDM, PWM, PP | muhammadiyahsolo.com (tercantum di kop PDM Kota Surakarta), pwmjateng.com, muhammadiyah.or.id | _15 November 2026_ |
 
 ### Catatan data
 
