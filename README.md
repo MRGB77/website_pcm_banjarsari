@@ -115,8 +115,11 @@ static/css/    site.css
 
 | Anggota | Dikerjakan |
 |---------|------------|
-| _isi_ | _isi_ |
-| _isi_ | _isi_ |
+| _Danar Tri Prayoga_ | _Arsitektur & CI/CD_ |
+| _Daffa Raihan_ | _Model Data & Admin_ |
+| _Azwar Dipo Astuko_ | _Data Rill & Seeding_ |
+| _Gibran Alghifari Maulana Masli_ | _Docker & Entrypoint_ |
+| _Kaukaban Syarqi_ | _Cloud & Storage_ |
 
 ## Akun admin demo
 
