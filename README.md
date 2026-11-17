@@ -35,7 +35,7 @@ Tugas 1 — Pemrograman Web berbasis Framework (TIF1336): membangun dan men-depl
 | Amal usaha (SMA Muhammadiyah 6, 9 masjid, Wisma Musolla Pemuda) | Laporan Musycab 2023 hlm. 12; berkas "amal usaha pcm banjarsari"; papan "Tanah Milik Muhammadiyah" di lokasi | _11 November 2026_ |
 | Berita dan agenda koordinasi 16 Okt 2026 | Poster dan contoh publikasi "PCM Banjarsari News" dari pengurus | _11 November 2026_ |
 | Agenda Pengajian Hari Bermuhammadiyah (25 Okt) dan Safari Dakwah (rencana Des–Jan, belum pasti) | Berkas "kegiatan mendatang pcm banjarsari" | _11 November 2026_ |
-| Kegiatan rutin (rapat pleno, pengajian HPT, dll.) | Berkas "kegiatan rutin pcm banjarsari" | _isi_ |
+| Kegiatan rutin (rapat pleno, pengajian HPT, dll.) | Berkas "kegiatan rutin pcm banjarsari" | _22 November 2026_ |
 | Visi dan misi | Berkas "visi misi muhammadiyah" | _11 November 2026_ |
 | Tagline "Memajukan Banjarsari, Mencerahkan Semesta." | Sampul/footer dokumen Musycab 2023 | _15 November 2026_ |
 | Tautan PDM, PWM, PP | muhammadiyahsolo.com (tercantum di kop PDM Kota Surakarta), pwmjateng.com, muhammadiyah.or.id | _15 November 2026_ |
